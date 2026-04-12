@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RadioWave — Hindi Radio Player</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="player.css" />
+</head>
+<body>
+
+  <!-- Portrait-only overlay -->
+  <div class="rotate-overlay" id="rotateOverlay">
+    <div class="rotate-icon">📱</div>
+    <div class="rotate-title">Rotate Your Device</div>
+    <div class="rotate-sub">RadioWave works best in portrait mode</div>
+  </div>
+
+  <!-- Background Blobs -->
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+
+  <!-- Phone Frame -->
+  <div class="phone" id="phone">
+
+    <!-- Dynamic Island -->
+    <div class="dynamic-island" id="dynamicIsland">
+      <div class="island-live">
+        <div class="island-dot"></div>
+        <span id="islandName">Loading...</span>
+      </div>
+    </div>
+
+    <!-- Status Bar -->
+    <div class="status-bar">
+      <span class="status-time" id="statusTime">12:00</span>
+      <div class="status-icons">
+        <!-- Signal -->
+        <svg viewBox="0 0 24 24">
+          <rect x="2"  y="14" width="3" height="7"  rx="1"/>
+          <rect x="7"  y="10" width="3" height="11" rx="1"/>
+          <rect x="12" y="6"  width="3" height="15" rx="1"/>
+          <rect x="17" y="2"  width="3" height="19" rx="1" opacity="0.4"/>
+        </svg>
+        <!-- WiFi -->
+        <svg viewBox="0 0 24 24" stroke="rgba(255,255,255,0.85)" fill="none" stroke-width="2">
+          <path d="M1.5 8.5a18 18 0 0121 0"/>
+          <path d="M5 12a13 13 0 0114 0"/>
+          <path d="M8.5 15.5a8 8 0 017 0"/>
+          <circle cx="12" cy="19" r="1" fill="rgba(255,255,255,0.85)"/>
+        </svg>
+        <!-- Battery -->
+        <div class="battery-bar"><div class="battery-fill"></div></div>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <div class="header">
+      <div>
+        <div class="header-title">RadioWave 🇮🇳</div>
+        <div class="header-subtitle">Hindi · Free live radio</div>
+      </div>
+      <div class="icon-btn" id="openPanelBtn" title="All Stations">
+        <svg viewBox="0 0 24 24" stroke-width="2">
+          <line x1="8" y1="6"  x2="21" y2="6"/>
+          <line x1="8" y1="12" x2="21" y2="12"/>
+          <line x1="8" y1="18" x2="21" y2="18"/>
+          <line x1="3" y1="6"  x2="3.01" y2="6"/>
+          <line x1="3" y1="12" x2="3.01" y2="12"/>
+          <line x1="3" y1="18" x2="3.01" y2="18"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Now Playing Card -->
+    <div class="now-playing" id="nowPlaying">
+      <div class="art-wrapper">
+        <div class="art-ring"></div>
+        <div class="art-ring"></div>
+        <div class="art-ring"></div>
+        <div class="art-circle" id="artCircle">
+          <span id="artEmoji">🎵</span>
+          <div class="eq-bars">
+            <div class="eq-bar"></div><div class="eq-bar"></div>
+            <div class="eq-bar"></div><div class="eq-bar"></div>
+            <div class="eq-bar"></div><div class="eq-bar"></div>
+            <div class="eq-bar"></div><div class="eq-bar"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="station-meta">
+        <div class="live-badge"><div class="dot"></div> Live</div>
+        <div class="station-name" id="stationName">—</div>
+        <div class="station-genre" id="stationGenre">—</div>
+        <div class="station-desc" id="stationDesc">Loading stations…</div>
+      </div>
+    </div>
+
+    <!-- Wave Visualizer -->
+    <div class="wave-container" id="waveContainer"></div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <div class="ctrl-btn side" id="prevBtn" title="Previous">
+        <svg viewBox="0 0 24 24" stroke-width="2">
+          <polygon points="19 20 9 12 19 4 19 20"/>
+          <line x1="5" y1="19" x2="5" y2="5"/>
+        </svg>
+      </div>
+
+      <div class="play-btn" id="playBtn">
+        <div class="loading-ring" id="loadingRing"></div>
+        <svg class="play-icon"  viewBox="0 0 24 24" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        <svg class="pause-icon" viewBox="0 0 24 24" stroke-width="2"><line x1="6" y1="4" x2="6" y2="20"/><line x1="18" y1="4" x2="18" y2="20"/></svg>
+      </div>
+
+      <div class="ctrl-btn side" id="nextBtn" title="Next">
+        <svg viewBox="0 0 24 24" stroke-width="2">
+          <polygon points="5 4 15 12 5 20 5 4"/>
+          <line x1="19" y1="4" x2="19" y2="20"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Volume -->
+    <div class="volume-row">
+      <div class="vol-icon">
+        <svg viewBox="0 0 24 24" stroke-width="2">
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+        </svg>
+      </div>
+      <input type="range" class="vol-slider" id="volSlider" min="0" max="1" step="0.02" value="0.8" />
+      <div class="vol-icon">
+        <svg viewBox="0 0 24 24" stroke-width="2">
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+          <path d="M15.54 8.46a5 5 0 010 7.07"/>
+          <path d="M19.07 4.93a10 10 0 010 14.14"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Stations Panel (absolute overlay) -->
+    <div class="stations-panel open" id="stationsPanel">
+      <div class="stations-panel-header">
+        <div>
+          <div class="stations-panel-title">All Stations</div>
+          <div class="stations-panel-sub" id="stationsCount"></div>
+        </div>
+        <div class="icon-btn" id="closePanelBtn" title="Close">
+          <svg viewBox="0 0 24 24" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6"  y1="6" x2="18" y2="18"/>
+          </svg>
+        </div>
+      </div>
+      <div class="stations-list" id="stationsList"></div>
+    </div>
+
+    <!-- Error Toast -->
+    <div class="toast" id="toast"></div>
+
+  </div><!-- /phone -->
+
+  <!-- Audio -->
+  <audio id="audioEl" crossorigin="anonymous" preload="none"></audio>
+
+  <!-- App Script -->
+  <script src="player.js"></script>
+</body>
+</html>

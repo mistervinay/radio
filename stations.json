@@ -1,0 +1,111 @@
+[
+  {
+    "name":   "Vividh Bharati",
+    "genre":  "Hindi · Classical",
+    "desc":   "All India Radio — timeless Hindi film songs & classics",
+    "emoji":  "🪔",
+    "color":  ["#b45309", "#1a0f02"],
+    "accent": "#fcd34d",
+    "stream": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio001/playlist.m3u8"
+  },
+  {
+    "name":   "Radio Nasha 107.2",
+    "genre":  "Hindi · 90s Hits",
+    "desc":   "Pure nostalgia — the best Hindi songs of the 90s & 2000s",
+    "emoji":  "📻",
+    "color":  ["#6d28d9", "#0f0720"],
+    "accent": "#a78bfa",
+    "stream": "https://stream.zeno.fm/0r0xa792kwzuv"
+  },
+  {
+    "name":   "92.7 Big FM",
+    "genre":  "Hindi · Chartbusters",
+    "desc":   "Suno Sunao Life Banao — nonstop Bollywood hits 24/7",
+    "emoji":  "🔊",
+    "color":  ["#ea580c", "#1a0c02"],
+    "accent": "#fb923c",
+    "stream": "https://stream-151.zeno.fm/dbstwo3dvhhtv"
+  },
+  {
+    "name":   "AIR FM Gold",
+    "genre":  "Hindi · All India Radio",
+    "desc":   "All India Radio — golden era Bollywood & Hindi classics",
+    "emoji":  "🥇",
+    "color":  ["#92400e", "#1a1002"],
+    "accent": "#fcd34d",
+    "stream": "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio005/hlspbaudio00564kbps.m3u8"
+  },
+  {
+    "name":   "AIR FM Rainbow",
+    "genre":  "Hindi · Multi-lingual",
+    "desc":   "All India Radio Rainbow — light music & regional variety",
+    "emoji":  "🌈",
+    "color":  ["#0891b2", "#031014"],
+    "accent": "#67e8f9",
+    "stream": "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio004/hlspbaudio00464kbps.m3u8"
+  },
+  {
+    "name":   "Radio City 91.1 FM",
+    "genre":  "Hindi · Pop",
+    "desc":   "Mumbai's No.1 FM — fresh Bollywood beats & hit music",
+    "emoji":  "🏙️",
+    "color":  ["#7c3aed", "#0f0720"],
+    "accent": "#a78bfa",
+    "stream": "https://stream-177.zeno.fm/pxc55r5uyc9uv"
+  },
+  {
+    "name":   "93.5 Red FM",
+    "genre":  "Hindi · Masala Mix",
+    "desc":   "Baje Ga Toh Bolega — India's most masaledaar radio",
+    "emoji":  "🌶️",
+    "color":  ["#dc2626", "#1a0303"],
+    "accent": "#fca5a5",
+    "stream": "https://stream.zeno.fm/9phrkb1e3v8uv"
+  },
+  {
+    "name":   "Radio Hungama 90s",
+    "genre":  "Hindi · 90s Bollywood",
+    "desc":   "Pure 90s hungama — the best decade of Hindi film music",
+    "emoji":  "🎉",
+    "color":  ["#db2777", "#1a0510"],
+    "accent": "#f472b6",
+    "stream": "https://stream.zeno.fm/rm4i9pdex3cuv"
+  },
+  {
+    "name":   "Aaj Tak Radio 91.9",
+    "genre":  "Hindi · News & Music",
+    "desc":   "Seedhi Baat — Aaj Tak FM news talk & music mix",
+    "emoji":  "📰",
+    "color":  ["#1d4ed8", "#020b1a"],
+    "accent": "#60a5fa",
+    "stream": "https://aajtaklive-amd.akamaized.net/hls/live/2014416-b/aajtak/aajtaklive/live_234p/chunks.m3u8"
+  },
+  {
+    "name":   "Radio Evergreen FM",
+    "genre":  "Hindi · Evergreen Hits",
+    "desc":   "Timeless Bollywood — songs that never go out of style",
+    "emoji":  "🌳",
+    "color":  ["#15803d", "#041a0a"],
+    "accent": "#86efac",
+    "stream": "https://server.mixify.in:8010/radio.mp3"
+  },
+  {
+    "name":   "Radio Retro",
+    "genre":  "Hindi · Retro Classics",
+    "desc":   "Old-is-gold Bollywood from the 60s, 70s & 80s",
+    "emoji":  "🎞️",
+    "color":  ["#854d0e", "#1a0e02"],
+    "accent": "#fbbf24",
+    "stream": "https://stream.zeno.fm/g372rxef798uv"
+  },
+  {
+    "name":   "Bollywood Radio",
+    "genre":  "Bollywood · Non-stop",
+    "desc":   "Non-stop Bollywood — latest & greatest hits all day",
+    "emoji":  "🎬",
+    "color":  ["#9333ea", "#130720"],
+    "accent": "#d8b4fe",
+    "stream": "https://s6.yesstreaming.net/proxy/john1237?mp=/live"
+  }
+]
+
