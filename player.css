@@ -491,7 +491,7 @@ body {
 }
 
 /* Show rotate overlay & hide player in landscape on mobile */
-@media (orientation: landscape) and (max-height: 600px) {
+@media (orientation: landscape) and (max-width: 800px) {
   .rotate-overlay { display: flex; }
   .blob-1, .blob-2, .blob-3 { display: none; }
   .phone { display: none; }
