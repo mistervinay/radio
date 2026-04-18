@@ -24,17 +24,13 @@ HTML5
 CSS3
 JavaScript
 Audio Streaming APIs
-📸 Screenshots
 
-(Add your app screenshots here)
-
-🔧 Installation
+🔧 Installation:
 git clone https://github.com/your-username/live-radio-player.git
 cd live-radio-player
 open index.html
-🌍 Live Demo
-
-(Add your hosted link here)
+🌍 Live Demo:
+https://mistervinay.github.io/radio
 
 📌 Use Case
 Free entertainment platform
